@@ -22,13 +22,10 @@ export class SubmitanswerComponent implements OnInit {
     if (this.questionInfo.answer == this.answerInput) {
       console.log("correct")
       this.userScore += this.questionInfo.value;
-      this.answerInput = "";
-      this.buttonClicked.emit()
     } else {
       console.log("wrong");
-      this.answerInput = "";
-      this.buttonClicked.emit();
     }
-
+    this.answerInput = "";
+    this.buttonClicked.emit()
   }
 }
