@@ -10,7 +10,6 @@ export class AppComponent implements OnInit {
   title = 'app';
 
   questionInfo;
-  answerInput: string;
 
   constructor(private jeopardyService: JeopardyService) { }
 

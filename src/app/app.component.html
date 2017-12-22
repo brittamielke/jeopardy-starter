@@ -11,7 +11,9 @@ the user's score is: {{ submitAnswer.userScore }}
 <br>
 
 
-<app-submitanswer #submitAnswer (buttonClicked)="getDataFromService($event)" [questionInfo]="questionInfo"></app-submitanswer>
+<app-submitanswer #submitAnswer 
+(buttonClicked)="getDataFromService()"
+[questionInfo]="questionInfo"></app-submitanswer>
 
 <br>
 <br><br>
