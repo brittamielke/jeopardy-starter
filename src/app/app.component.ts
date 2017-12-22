@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {JeopardyService } from './jeopardy.service';
+import { Component, OnInit, Input } from '@angular/core';
+import { JeopardyService } from './jeopardy.service';
 
 @Component({
   selector: 'app-root',
@@ -10,19 +10,21 @@ export class AppComponent implements OnInit {
   title = 'app';
 
   questionInfo;
+  answerInput: string;
 
-  constructor(private jeopardyService: JeopardyService){}
+  constructor(private jeopardyService: JeopardyService) { }
 
-  getDataFromService(){
+  getDataFromService() {
     this.jeopardyService.getQuestionInfo()
       .subscribe(
-        questionInfo => {
-          this.questionInfo = questionInfo[0];
-        }
+      questionInfo => {
+        this.questionInfo = questionInfo[0];
+      }
       )
+
   }
 
-  ngOnInit(){
+  ngOnInit() {
     this.getDataFromService()
   }
 
